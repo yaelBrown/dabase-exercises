@@ -1,6 +1,6 @@
 -- INSERT INTO albums (artist, genre, name, release_date) VALUES ('bob', 'rock', 'Bob Marleys Greatest Hits', 1984);
 
-USE codeup_test_db
+USE codeup_test_db;
 
 -- Test
 INSERT INTO albums (artist, name, release_date, sales, genre) VALUES ('Michael Jackson', 'Thriller', '1982', 'Pop, Rock, R&B', '41.2');
