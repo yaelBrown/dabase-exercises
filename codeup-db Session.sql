@@ -1,0 +1,1 @@
+INSERT INTO albums (artist, genre, name, release_date) VALUES ('bob', 'rock', 'Bob Marleys Greatest Hits', 1984);
