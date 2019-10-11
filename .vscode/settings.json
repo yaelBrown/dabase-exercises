@@ -8,6 +8,15 @@
       "port": 3306,
       "server": "localhost",
       "username": "root"
+    },
+    {
+      "database": "employees",
+      "dialect": "MySQL",
+      "name": "employees",
+      "password": "codeup",
+      "port": 3306,
+      "server": "localhost",
+      "username": "root"
     }
   ]
 }
