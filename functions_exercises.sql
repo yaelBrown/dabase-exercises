@@ -3,6 +3,8 @@ SELECT * FROM employees WHERE first_name IN ('Irena', 'Vidya', 'Maya') ORDER BY 
 
 -- Find all employees whose last name starts with 'E'
 SELECT * FROM employees WHERE last_name like 'e%';
+# SELECT CONCAT([column name], ' ', [column name]) AS '[Name for the column to display]', [column name] FROM [db name]
+SELECT CONCAT(first_name, ' ', last_name) AS 'Name'FROM employees;
 
 -- Find all employees hired in the 90s
 SELECT * FROM employees WHERE hire_date BETWEEN '1990-01-01' AND '1999-12-31';
@@ -30,6 +32,9 @@ SELECT * FROM employees WHERE last_name like 'e%' AND '%e';
 
 -- Find all employees hired in the 90s and born on Christmas — 362 rows.
 SELECT * FROM employees WHERE hire_date BETWEEN '1990-01-01' AND '1999-12-31' like '%-12-25' ORDER BY birth_date, hire_date desc;
+
+-- r your query of employees born on Christmas and hired in the 90s, use datediff() to find how many days they have been working at the company (Hint: You will also need to use now() or curdate())
+SELECT DATEDIFF(curdate(), hire_date) AS 'Days Employed' FROM employees WHERE hire_date LIKE '199%' AND hire_date like '%-12-25' ORDER BY hire_date desc;
 
 -- Find all employees with a 'q' in their last name but not 'qu' — 547 rows.
 SELECT * FROM employees WHERE last_name like '%q%';

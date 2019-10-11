@@ -6,6 +6,7 @@ SELECT * FROM employees WHERE last_name like 'e%';
 
 -- Find all employees hired in the 90s
 SELECT * FROM employees WHERE hire_date BETWEEN '1990-01-01' AND '1999-12-31';
+# SELECT * FROM employees WHERE hire_date like '199%';
 
 -- Find all employees born on Christmas
 SELECT * FROM employees WHERE birth_date like '%-12-25';
