@@ -19,3 +19,9 @@ SELECT * FROM employees WHERE gender = "F"
         SELECT emp_no FROM dept_manager
         WHERE to_date > NOW()
     );
+
+# (Curious) Find Tokuyasu Pesch (person with the highest salary) actual salary.
+SELECT salary FROM salaries
+WHERE emp_no IN (
+    SELECT emp_no from employees where first_name = "Tokuyasu" and last_name = "Pesch"
+);
