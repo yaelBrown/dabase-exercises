@@ -8,7 +8,7 @@ WHERE id IN (
 );
 
 -- For a given ad, what category, or categories, does it belong to?
-SELECT Category.name FROM Category
+SELECT name FROM Category
     JOIN Ads_Category ON Ads_Category.cat_id = Category.id
     JOIN Ads ON Ads.id = Ads_Category.ads_id;
 
@@ -17,7 +17,7 @@ SELECT Category.name FROM Category
 SELECT title FROM ads WHERE id IN (
     SELECT ads_id FROM ads_category WHERE cat_id IN (
         SELECT id FROM Category
-        WHERE name = "Nurse"
+        WHERE name = "Trade"
     )
 );
 
