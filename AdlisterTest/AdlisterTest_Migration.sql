@@ -3,7 +3,6 @@ CREATE DATABASE adlisterTest;
 
 USE adlisterTest;
 
-
 -- Setup Tables
 CREATE TABLE Users (
                        id int UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -11,14 +10,9 @@ CREATE TABLE Users (
                        password VARCHAR(50)
 );
 
-CREATE TABLE User_Ads (
-                          user_id int UNSIGNED NOT NULL,
-                          ads_id int UNSIGNED NOT NULL,
-                          UNIQUE (user_id, ads_id)
-);
-
 CREATE TABLE Ads (
                      id int UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+                     author_id int UNSIGNED,
                      title VARCHAR(100),
                      description TEXT
 );
