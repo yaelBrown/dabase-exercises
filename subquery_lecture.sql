@@ -1,1 +1,1 @@
-SELECT
+-- sub queries are easier than joins.
